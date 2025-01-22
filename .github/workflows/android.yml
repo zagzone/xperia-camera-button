@@ -33,5 +33,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: Grant execute permissions for gradlew
+        run: chmod +x ./gradlew
+
       - name: Build with Gradle
         run: ./gradlew assembleDebug
+
